@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block html %}
+	<head>
+		<meta charset="utf-8">
+		<meta name="theme-color">
+
+		<!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'index.css')}}"/>
+		<!--link rel="icon" type="image/jpg" href="{{ url_for('static', filename = 'img/muuvas_logo.png')}}" --> 
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+		<!--link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"-->
+		<title> Muuvas </title>
+		<meta name = "description" content = "We go the extra mile for you">
+		<meta name="keywords" content="Muuvas, muuvas, MUUVAS, muuvas logistics, muuvas logistics service, Best, Fast, Delivery, Service, Logistics, Delivery Service, Reliable, Affordable">
+
+		{% block head %}{% endblock head %}
+	</head>
+	<body>
+		<div class="heady">
+		<div class="contact-bar">
+			
+			<span class="contact-bar-title">HEAD OFFICE: &nbsp;</span>
+			<span class="contact-bar-description">4B, Oyeleke street Ikeja, 100001, Lagos &nbsp;</span>
+
+			<span class="contact-bar-title">&nbsp; CALL: &nbsp;</span>
+			<span class="contact-bar-description">09095055577 &nbsp;</span>
+
+			<span class="contact-bar-title">&nbsp; EMAIL: &nbsp;</span>
+			<span class="contact-bar-description">enquiries@muuvas.com &nbsp;</span>
+
+			<span class="contact-bar-title">&nbsp; MONDAY - SUNDAY &nbsp;</span>
+			<div class="contact-bar-icon">
+				&nbsp; <a href="/"><img class="icon" src="{{ url_for('static', filename = 'image/facebook 1.svg')}}"  alt="image"></a> &nbsp;
+				&nbsp; <a href="/"><img class="icon" src="{{ url_for('static', filename = 'image/Vector.svg')}}"  alt="image"></a> &nbsp;
+				&nbsp; <a href="/"><img class="icon" src="{{ url_for('static', filename = 'image/instagram 1.svg')}}"  alt="image"></a> &nbsp;
+				&nbsp; <a href="/"><img class="icon" src="{{ url_for('static', filename = 'image/whatsapp 1.svg')}}"  alt="image"></a> 
+		
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="header1">
+			<a href="/"><img class="logo" src="{{ url_for('static', filename = 'image/logo_transparent_background.png')}}"  alt="image"></a>
+			<a href="/"><span class="nav">CONTACT US</span></a>
+			<a href="/"><span class="nav">DELIVERY QUEST</span></a>
+			<a href="/book-us-now"><span class="nav">OUR SERVICES</span></a>
+			<a href="/"><span class="nav">MERCHANT LOGIN</span></a>
+			<a href="/request-a-quote"><span class="now-btn">SHIP NOW</span></a>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="mobile-header">
+			<div><a href="/"><img class="mobile-logo" src="{{ url_for('static', filename = 'image/white_logo_transparent_background.png')}}"  alt="image"></a></div>
+			
+			<div class="ham-menu">
+				<div class="menu1"></div>
+				<div class="menu2"></div>
+				<div class="menu3"></div>
+			</div>
+		</div>
+
+		{% block body %}{% endblock body %}
+
+
+		<div class="desktop-footer">
+			<div class="footer-section1">
+				<div class="fs1">
+					<div class="contact-us"> CONTACT US</div><a href="/"><div class="become">BECOME A DELIVERY PARTNER</div></a>
+				</div>
+				<div class="fs2">
+					<div class="muuvas"> Muuvas Logistics</div><div class="become2">4b Oyeleke Street Off Kudirat Abiola Way, Ikeja.</div>
+				</div>
+				<div class="fs3">
+					<div class="become1"> Tel: +2349036576479</div><div class="become2">Email: enquiries@muuvas.com</div>
+				</div>
+				<div class="fs4">
+					<div class="socials"><a href="/"><img class="socials-icon" src="{{ url_for('static', filename = 'image/facebook3.svg')}}"  alt="image"></a><a href="/"><img class="socials-icon" src="{{ url_for('static', filename = 'image/Vector3.svg')}}"  alt="image"></a><a href="/"><img class="socials-icon" src="{{ url_for('static', filename = 'image/instagram3.svg')}}"  alt="image"></a><a href="/"><img class="socials-icon" src="{{ url_for('static', filename = 'image/whatsapp3.svg')}}"  alt="image"></a></div>
+				</div>
+				<div class="fs5">
+					<div class="become1"> COPYRIGHT © 2021 TAEILLO.</div><a href="/"><div class="become">Terms of Use & Privacy Policy</div></a>
+				</div>
+				
+			</div>
+			<div class="footer-section2">
+				<form action="/enquiries">
+					<input class="input" type="text" name="name" placeholder="Name" required><br>
+					<input class="input" type="email" name="email" placeholder="Email" required><br>
+					<input class="input" type="text" name="subject" placeholder="Subject" required><br>
+					<textarea class="textarea" name="enquire" placeholder="Write your enquiries now and one of our team would be in contact with you shortly." required></textarea><br>
+					<button class="btn" type="submit">Send Message</button>
+				</form>
+				
+			</div>
+		</div>
+
+		<script rel="javascript" type= "text/javascript" src="{{ url_for('static', filename = 'index.js')}}"></script>
+	</body>
+{% endblock html %}
+</html>
