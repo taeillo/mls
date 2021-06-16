@@ -14,6 +14,9 @@ a{
 
 
 /*Class*/
+.overlay{
+	display: none;
+}
 
 .mobile-header{
 	display: none;
@@ -1137,5 +1140,49 @@ a{
 	    flex-direction: column;
 	    width: 100%;
 	    justify-content: space-between;
+	}
+
+	.overlay{
+		height: 100vh;
+		position: fixed;
+		z-index: 16;
+		background: #fff;
+		color: #292929;
+		padding: 2rem 0;
+	}
+
+	.overlay-text{
+		width: 80%;
+		font-size: 24px;
+		
+		color: #292929;
+	}
+
+	.cancel-sec{
+		justify-content: flex-end;
+		margin-top: -0.8rem;
+	}
+
+	.cancel{
+		
+		
+		font-size: 42px;
+		font-weight: 800;
+	}
+
+	.overlay-subtext{
+		margin:0 0 4rem 0;
+		padding: 0 2rem;
+		font-weight: 400;
+	}
+
+	.link{
+		color: #292929;
+	}
+
+	#overlay{
+		width: 0;
+		display: none;
+
 	}
 }
