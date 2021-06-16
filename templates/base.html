@@ -58,11 +58,24 @@
 		<div class="mobile-header">
 			<div><a href="/"><img class="mobile-logo" src="{{ url_for('static', filename = 'image/white_logo_transparent_background.png')}}"  alt="image"></a></div>
 			
-			<div class="ham-menu">
+			<div class="ham-menu" onclick="openNav()">
 				<div class="menu1"></div>
 				<div class="menu2"></div>
 				<div class="menu3"></div>
 			</div>
+		</div>
+
+		<div id="overlay" class="overlay">
+			<div class="overlay-text">
+				<div class="overlay-subtext"><a href="/" class="link">Home</a></div>
+				<div class="overlay-subtext"><a href="/request-a-quote" class="link">Ship Now</a></div>
+				<div class="overlay-subtext"><a href="/book-us-now" class="link">Services</a></div>
+				<div class="overlay-subtext"><a href="/" class="link">Contact Us</a></div>
+				<div class="overlay-subtext"><a href="/" class="link">Delivery Quest</a></div>
+			</div>
+
+			<div class="cancel-sec"><div class="cancel" onclick="closeNav()">&times;</div></div>
+			
 		</div>
 
 		{% block body %}{% endblock body %}
